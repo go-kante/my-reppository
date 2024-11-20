@@ -1,0 +1,16 @@
+gi{
+	"folders": [
+		{
+			"path": "mandara.git/mandara"
+		},
+		{
+			"path": "mandara.git"
+		},
+		{
+			"path": "../../../Applications/MAMP/htdocs/学習用/mandara.git"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "mandara"
+	}
+}

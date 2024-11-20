@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+    <link href="text.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <div id="main" class="tool_wrapper">
+    <div class="tit">
+         <h1>環境依存文字チェッカー</h1>
+    </div>
+        <div>
+            <textarea class="test"> </textarea>
+            <button onclick="clickBtn()">ボタンを押してください</button>
+        </div>
+  </div>  
+  <script>
+    function hasDependencyCharacter(str) {
+      // 機種依存文字を表す正規表現
+      const dependencyCharPattern = /[\uFF61-\uFF9F\uE000-\uF8FF\u2460-\u24FF]/;
+      
+      // 文字列に機種依存文字が含まれているかチェック
+      return dependencyCharPattern.test(str);
+    }
+    
+    // テスト用の文字列
+    const testString = "これはテスト❶文字列です。";
+    
+    if (hasDependencyCharacter(testString)) {
+      console.log("機種依存文字が含まれています。");
+    } else {
+      console.log("機種依存文字は含まれていません。");
+    }
+    </script>
+        
+</body>
+</html>
